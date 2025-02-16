@@ -40,7 +40,7 @@ void FileMonitoring::checkFileStatus() {
     for (auto& currentFile : repository) {
         QFileInfo updatedFileInfo(currentFile.getPath());
 
-        if (!updatedFileInfo.isFile()) {
+        if (!updatedFileInfo.exists()) {
             if (!currentFile.isNotExists()) {
                 emit fileNotExists(currentFile.getPath());
 
