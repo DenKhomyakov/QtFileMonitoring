@@ -15,6 +15,6 @@ void Logger::printFileExistsAndModified(File* file) {
 }
 
 void Logger::printFileNotExists(const QString& filePath) {
-    qInfo() << "File on path " << filePath << "doesn't exists";
-    qInfo();
+    qInfo() << "File on path " << filePath << " doesn't exists";
+    qInfo() << "";
 }
