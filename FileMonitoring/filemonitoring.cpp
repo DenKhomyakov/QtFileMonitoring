@@ -51,7 +51,7 @@ void FileMonitoring::checkFileStatus() {
         } else {
             if (updatedFileInfo.lastModified() == currentFile.getTimeChanging()) {
                 if (!currentFile.isExists()) {
-                    emit fileExistsAndModified(&currentFile);
+                    emit fileExists(&currentFile);
 
                     currentFile.setExists(true);
                     currentFile.setNotExists(false);
