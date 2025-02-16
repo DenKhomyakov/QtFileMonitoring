@@ -7,11 +7,6 @@ FileMonitoring::FileMonitoring() {
     connect(this, &FileMonitoring::fileExists, logger, &Logger::printFileExists);
     connect(this, &FileMonitoring::fileExistsAndModified, logger, &Logger::printFileExistsAndModified);
     connect(this, &FileMonitoring::fileNotExists, logger, &Logger::printFileNotExists);
-
-    timer = new QTimer(this);
-    timer->setInterval(1000);
-    connect(timer, &QTimer::timeout, this, &FileMonitoring::checkFileStatus);
-    timer->start();
 }
 
 FileMonitoring::~FileMonitoring() {

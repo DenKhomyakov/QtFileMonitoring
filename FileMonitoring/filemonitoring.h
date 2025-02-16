@@ -3,7 +3,6 @@
 
 #include <QObject>
 #include <QList>
-#include <QTimer>
 #include "file.h"
 
 class Logger;
@@ -29,7 +28,6 @@ signals:
 private:
     QList<File> repository;
     Logger* logger;
-    QTimer* timer;
 };
 
 #endif // FILEMONITORING_H
